@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#8DB4D8">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:orientation="horizontal"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:id="@+id/setting_actionbar">
+        <LinearLayout
+            android:id="@+id/back_btn"
+            android:clickable="true"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <Button
+                android:layout_width="10dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/back_btn"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="환경설정"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="25dp"/>
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:background="@drawable/finish_btn"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:clickable="false"
+            android:visibility="invisible"/>
+    </RelativeLayout>//액션바
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/line"
+        android:layout_below="@+id/setting_actionbar"/>//액션바 사이 라인
+
+    //목소리 톤
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="150dp"
+        android:layout_below="@+id/setting_actionbar"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/voice_tone_setting">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:id="@+id/voice_tone"
+            android:text="목소리 톤 : "
+            android:textSize="20dp"
+            android:textColor="#FFFFFF"/>
+
+        <TextView
+            android:id="@+id/toneValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/voice_tone"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@+id/voice_tone"
+            android:text="10"
+            android:textSize="20dp"
+            android:textColor="#FFFFFF"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/voice_tone"
+            android:layout_toRightOf="@+id/voice_tone"
+            android:layout_marginLeft="125dp"
+            android:background="@color/colorPrimary">
+            <Button
+                android:id="@+id/toneUp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/up_btn"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/voice_tone"
+            android:layout_toRightOf="@+id/voice_tone"
+            android:layout_marginLeft="80dp"
+            android:background="@color/colorPrimary">
+            <Button
+                android:id="@+id/toneDown"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/down_btn"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    //말하기 속도
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/voice_tone_setting"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/voice_speed_setting">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dp"
+            android:id="@+id/voice_speed"
+            android:text="말하기 속도 : "
+            android:textSize="20dp"
+            android:textColor="#FFFFFF"/>
+
+        <TextView
+            android:id="@+id/speedValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_alignBaseline="@+id/voice_speed"
+            android:layout_toRightOf="@+id/voice_speed"
+            android:text="10"
+            android:textSize="20dp"
+            android:textColor="#FFFFFF"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/voice_speed"
+            android:layout_toRightOf="@+id/voice_speed"
+            android:layout_marginLeft="111dp"
+            android:background="@color/colorPrimary">
+            <Button
+                android:id="@+id/speedUp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/up_btn" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/voice_speed"
+            android:layout_marginLeft="66dp"
+            android:layout_toRightOf="@+id/voice_speed"
+            android:background="@color/colorPrimary">
+            <Button
+                android:id="@+id/speedDown"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/down_btn" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/voice_speed_setting"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/dot_delay_setting">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:id="@+id/dot_delay"
+            android:text="문장 딜레이 :"
+            android:textSize="20dp"
+            android:textColor="#FFFFFF"/>
+
+        <TextView
+            android:id="@+id/delayValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/dot_delay"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/dot_delay"
+            android:text="900"
+            android:textSize="20dp"
+            android:textColor="#FFFFFF"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/dot_delay"
+            android:layout_toRightOf="@+id/dot_delay"
+            android:layout_marginLeft="115dp"
+            android:background="@color/colorPrimary">
+            <Button
+                android:id="@+id/delayUp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/up_btn"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/dot_delay"
+            android:layout_toRightOf="@+id/dot_delay"
+            android:layout_marginLeft="70dp"
+            android:background="@color/colorPrimary">
+            <Button
+                android:id="@+id/delayDown"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/down_btn"/>
+        </LinearLayout>
+    </RelativeLayout>
+    //언어변경
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/dot_delay_setting"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/languages_setting">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:text="언어 : "
+            android:textSize="20dp"
+            android:textColor="#FFFFFF"
+            android:id="@+id/lag"/>
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dropdown"
+            android:layout_marginLeft="90dp"
+            android:layout_marginRight="18dp">
+        </Spinner>
+    </RelativeLayout>
+</RelativeLayout>

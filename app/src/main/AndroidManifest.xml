@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.myapplication">
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <application
+        android:allowBackup="true"
+        android:screenOrientation="portrait"
+        android:icon="@mipmap/mp_icon"
+        android:label="morPH"
+        android:roundIcon="@mipmap/mp_icon_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".view.MainActivity"
+            android:screenOrientation="portrait"
+            android:label="morPH"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".view.ViewerActivity"
+            android:screenOrientation="portrait"
+            android:label="morPH"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".view.SettingActivity"
+            android:screenOrientation="portrait"
+            android:label="morPH"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".view.LoadingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+    </application>
+
+</manifest>
