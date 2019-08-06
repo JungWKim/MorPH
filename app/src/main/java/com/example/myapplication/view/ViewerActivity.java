@@ -71,7 +71,6 @@ public class ViewerActivity extends AppCompatActivity implements View.OnClickLis
         Presenter.enableSTService(new UtteranceProgressListener() {
             @Override
             public void onStart(String utteranceId) {
-
             }
 
             @Override
@@ -82,7 +81,6 @@ public class ViewerActivity extends AppCompatActivity implements View.OnClickLis
 
             @Override
             public void onError(String utteranceId) {
-
             }
         });
         receiveData();
@@ -92,15 +90,14 @@ public class ViewerActivity extends AppCompatActivity implements View.OnClickLis
         pause_btn_memo.setOnClickListener(btListener);
         save_fab.setOnClickListener(this);
 
-
     }
     public void linkViews() {
-        mTitleEditText = (EditText) findViewById(R.id.viewer_title_et);
-        mContentsEditText = (EditText) findViewById(R.id.viewer_contents_et);
-        pause_btn_memo = (Button) findViewById(R.id.pause_btn_memo);
+        mTitleEditText = findViewById(R.id.viewer_title_et);
+        mContentsEditText = findViewById(R.id.viewer_contents_et);
+        pause_btn_memo = findViewById(R.id.pause_btn_memo);
         back_btn = findViewById(R.id.back_btn);
-        play_btn_memo = (Button) findViewById(R.id.play_btn_memo);
-        save_fab = (Button) findViewById(R.id.viewer_save_fab);
+        play_btn_memo = findViewById(R.id.play_btn_memo);
+        save_fab = findViewById(R.id.viewer_save_fab);
     }
 
 

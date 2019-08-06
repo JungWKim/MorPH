@@ -72,9 +72,9 @@ public class MemoAdapter extends BaseAdapter {
         TextView mTitleTextView, mContentsTextView, mTimeTextView;
 
         ViewHolder(View itemView) {
-            mTitleTextView = (TextView) itemView.findViewById(R.id.item_memo_title_tv);
-            mContentsTextView = (TextView) itemView.findViewById(R.id.item_memo_contents_tv);
-            mTimeTextView = (TextView) itemView.findViewById(R.id.item_memo_time_tv);
+            mTitleTextView = itemView.findViewById(R.id.item_memo_title_tv);
+            mContentsTextView = itemView.findViewById(R.id.item_memo_contents_tv);
+            mTimeTextView = itemView.findViewById(R.id.item_memo_time_tv);
         }
     }
 }
