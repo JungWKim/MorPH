@@ -19,11 +19,13 @@ import android.support.v7.widget.Toolbar;
 import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -80,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setElevation(-1); //액션바 그림자 삭제
     }
     public void settingDrawerLayout() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
@@ -129,6 +131,7 @@ public class MainActivity extends AppCompatActivity {
         faBtnReadData.setOnClickListener(btnEvent.faBtnReadDataEvent);
         faBtnWrite.setOnClickListener(btnEvent.faBtnWriteEvent);
         main_Click.setOnClickListener(btnEvent.btnMainEvent);
+        main_Click.setOnTouchListener(btnEvent.btnDragExtendEvent);
     }
 
     @Override
@@ -325,6 +328,27 @@ public class MainActivity extends AppCompatActivity {
                     Presenter.setCurrentMemoDTO(new MemoDTO(main_title,main_contents));
                     startActivityForResult(intent, Permisson.REQUEST_WRITE);
                 }
+            }
+        };
+        View.OnTouchListener btnDragExtendEvent = new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction() & MotionEvent.ACTION_MASK) {
+                    case MotionEvent.ACTION_MOVE:
+                        float Ycoordinate = event.getY();
+
+                        if (Ycoordinate > 1600)
+                            main_Click.setLayoutParams(new LinearLayout.LayoutParams(1080, 1600));
+                        else if (Ycoordinate < 669)
+                            main_Click.setLayoutParams(new LinearLayout.LayoutParams(1080, 669));
+                        else
+                            main_Click.setLayoutParams(new LinearLayout.LayoutParams(1080, (int) Ycoordinate));
+                        break;
+
+                    case MotionEvent.ACTION_UP:
+                        main_Click.setLayoutParams(new LinearLayout.LayoutParams(1080, 669)); break;
+                }
+                return false;
             }
         };
     }
