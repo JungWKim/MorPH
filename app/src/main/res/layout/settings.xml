@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -9,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:orientation="horizontal"
-        android:layout_marginRight="10dp"
+        android:layout_marginRight="13dp"
         android:gravity="center"
         android:id="@+id/setting_actionbar">
         <LinearLayout
@@ -50,45 +51,64 @@
         android:background="@drawable/line"
         android:layout_below="@+id/setting_actionbar"/>//액션바 사이 라인
 
+
+    <TextView
+        android:layout_width="311dp"
+        android:layout_height="357dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="42dp"
+        android:layout_marginLeft="42dp"
+        android:layout_marginTop="117dp"
+        android:background="@xml/actions"
+        />
     //목소리 톤
+
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:layout_marginTop="150dp"
         android:layout_below="@+id/setting_actionbar"
         android:layout_centerHorizontal="true"
-        android:id="@+id/voice_tone_setting">
+        android:id="@+id/voice_tone_setting"
+        >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="2dp"
+            android:layout_marginLeft="30dp"
             android:id="@+id/voice_tone"
             android:text="목소리 톤 : "
             android:textSize="20dp"
-            android:textColor="#FFFFFF"/>
+            android:textColor="#8DB4D8"/>
 
+
+        <Button
+
+            android:layout_width="23dp"
+            android:layout_height="30dp"
+            android:background="@drawable/voicetone"/>
         <TextView
             android:id="@+id/toneValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/voice_tone"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="80dp"
             android:layout_toRightOf="@+id/voice_tone"
             android:text="10"
             android:textSize="20dp"
-            android:textColor="#FFFFFF"/>
+            android:textColor="#8DB4D8"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/voice_tone"
             android:layout_toRightOf="@+id/voice_tone"
-            android:layout_marginLeft="125dp"
-            android:background="@color/colorPrimary">
+            android:layout_marginLeft="125dp">
             <Button
                 android:id="@+id/toneUp"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
                 android:background="@drawable/up_btn"/>
         </LinearLayout>
 
@@ -97,16 +117,14 @@
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/voice_tone"
             android:layout_toRightOf="@+id/voice_tone"
-            android:layout_marginLeft="80dp"
-            android:background="@color/colorPrimary">
+            android:layout_marginLeft="30dp">
             <Button
                 android:id="@+id/toneDown"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
                 android:background="@drawable/down_btn"/>
         </LinearLayout>
     </RelativeLayout>
-
     //말하기 속도
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -115,49 +133,56 @@
         android:layout_below="@+id/voice_tone_setting"
         android:layout_centerHorizontal="true"
         android:id="@+id/voice_speed_setting">
+
         <TextView
+            android:id="@+id/voice_speed"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="1dp"
-            android:id="@+id/voice_speed"
+            android:layout_marginLeft="30dp"
             android:text="말하기 속도 : "
-            android:textSize="20dp"
-            android:textColor="#FFFFFF"/>
+            android:textColor="#8DB4D8"
+            android:textSize="20dp" />
 
         <TextView
             android:id="@+id/speedValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="12dp"
+            android:layout_marginLeft="65dp"
             android:layout_alignBaseline="@+id/voice_speed"
             android:layout_toRightOf="@+id/voice_speed"
             android:text="10"
             android:textSize="20dp"
-            android:textColor="#FFFFFF"/>
+            android:textColor="#8DB4D8"/>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/voice_speed"
             android:layout_toRightOf="@+id/voice_speed"
-            android:layout_marginLeft="111dp"
-            android:background="@color/colorPrimary">
+            android:layout_marginLeft="110dp">
             <Button
                 android:id="@+id/speedUp"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
                 android:background="@drawable/up_btn" />
         </LinearLayout>
+
+        <Button
+
+            android:layout_width="23dp"
+            android:layout_height="30dp"
+            android:background="@drawable/voicesp"/>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/voice_speed"
-            android:layout_marginLeft="66dp"
+            android:layout_marginLeft="15dp"
             android:layout_toRightOf="@+id/voice_speed"
-            android:background="@color/colorPrimary">
+            >
             <Button
                 android:id="@+id/speedDown"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
                 android:background="@drawable/down_btn" />
         </LinearLayout>
     </RelativeLayout>
@@ -172,34 +197,39 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="2dp"
+            android:layout_marginLeft="30dp"
             android:id="@+id/dot_delay"
             android:text="문장 딜레이 :"
             android:textSize="20dp"
-            android:textColor="#FFFFFF"/>
+            android:textColor="#8DB4D8"/>
 
+
+        <Button
+
+            android:layout_width="23dp"
+            android:layout_height="30dp"
+            android:background="@drawable/voiceline"/>
         <TextView
             android:id="@+id/delayValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/dot_delay"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="65dp"
             android:layout_toRightOf="@+id/dot_delay"
             android:text="900"
             android:textSize="20dp"
-            android:textColor="#FFFFFF"/>
+            android:textColor="#8DB4D8"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/dot_delay"
             android:layout_toRightOf="@+id/dot_delay"
-            android:layout_marginLeft="115dp"
-            android:background="@color/colorPrimary">
+            android:layout_marginLeft="110dp">
             <Button
                 android:id="@+id/delayUp"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
                 android:background="@drawable/up_btn"/>
         </LinearLayout>
 
@@ -208,12 +238,11 @@
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/dot_delay"
             android:layout_toRightOf="@+id/dot_delay"
-            android:layout_marginLeft="70dp"
-            android:background="@color/colorPrimary">
+            android:layout_marginLeft="15dp">
             <Button
                 android:id="@+id/delayDown"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
                 android:background="@drawable/down_btn"/>
         </LinearLayout>
     </RelativeLayout>
@@ -231,7 +260,7 @@
             android:layout_marginLeft="2dp"
             android:text="언어 : "
             android:textSize="20dp"
-            android:textColor="#FFFFFF"
+            android:textColor="#8DB4D8"
             android:id="@+id/lag"/>
 
         <Spinner
@@ -243,4 +272,5 @@
             android:layout_marginRight="18dp">
         </Spinner>
     </RelativeLayout>
+
 </RelativeLayout>
