@@ -101,25 +101,25 @@ public class MainActivity extends AppCompatActivity {
     }
     public void linkViews() {
         mContext = getApplicationContext();
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        navigationView = (NavigationView) findViewById(R.id.nav_view);
+        toolbar = findViewById(R.id.toolbar);
+        navigationView = findViewById(R.id.nav_view);
 
         //mMemoDAO = new MemoDAO(getApplicationContext());
 
         fab_open = AnimationUtils.loadAnimation(mContext, R.anim.fab_open);
         fab_close = AnimationUtils.loadAnimation(mContext, R.anim.fab_close);
 
-        faBtnExtend = (FloatingActionButton) findViewById(R.id.faBtnExtend);
-        faBtnReduce = (FloatingActionButton) findViewById(R.id.faBtnReduce);
-        faBtnReadData = (FloatingActionButton) findViewById(R.id.faBtnReadData);
-        faBtnWrite = (FloatingActionButton) findViewById(R.id.faBtnWrite);
+        faBtnExtend = findViewById(R.id.faBtnExtend);
+        faBtnReduce = findViewById(R.id.faBtnReduce);
+        faBtnReadData = findViewById(R.id.faBtnReadData);
+        faBtnWrite = findViewById(R.id.faBtnWrite);
 
-        listView = (ListView) findViewById(R.id.lv);
+        listView = findViewById(R.id.lv);
 
-        tvTitle = (TextView)findViewById(R.id.tvTitle);
-        tvContents = (TextView)findViewById(R.id.tvContents);
+        tvTitle = findViewById(R.id.tvTitle);
+        tvContents = findViewById(R.id.tvContents);
         main_Click = findViewById(R.id.main_click);//main_click -> content_main.xml의 linearlayout
-        btnSetting = (Button)findViewById(R.id.btnSetting);
+        btnSetting = findViewById(R.id.btnSetting);
     }
     public void registerEvent() {
         BtnEvent btnEvent = new BtnEvent();
@@ -133,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else { super.onBackPressed(); }

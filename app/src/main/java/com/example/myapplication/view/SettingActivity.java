@@ -71,9 +71,9 @@ public class SettingActivity extends Activity {
 
         if (Build.VERSION.SDK_INT >= 21) getWindow().setStatusBarColor(Color.rgb(141,180,216));
 
-        toneValue = (TextView) findViewById(R.id.toneValue);
-        speedValue = (TextView) findViewById(R.id.speedValue);
-        delayValue = (TextView) findViewById(R.id.delayValue);
+        toneValue = findViewById(R.id.toneValue);
+        speedValue = findViewById(R.id.speedValue);
+        delayValue = findViewById(R.id.delayValue);
         //bundle로 가져온 데이터를 화면에 표시
         toneValue.setText(String.valueOf(toneOnScreen));
         speedValue.setText(String.valueOf(speedOnScreen));
@@ -92,14 +92,14 @@ public class SettingActivity extends Activity {
         languageNum = sharedPreferences.getInt("languageShared", 1);
         delay = sharedPreferences.getInt("delayShared",900);
 
-        toneUp = (Button) findViewById(R.id.toneUp);
-        toneDown = (Button) findViewById(R.id.toneDown);
-        speedUp = (Button) findViewById(R.id.speedUp);
-        speedDown = (Button) findViewById(R.id.speedDown);
-        delayUp = (Button)findViewById(R.id.delayUp);
-        delayDown = (Button)findViewById(R.id.delayDown);
+        toneUp = findViewById(R.id.toneUp);
+        toneDown = findViewById(R.id.toneDown);
+        speedUp = findViewById(R.id.speedUp);
+        speedDown = findViewById(R.id.speedDown);
+        delayUp = findViewById(R.id.delayUp);
+        delayDown = findViewById(R.id.delayDown);
         back_btn =  findViewById(R.id.back_btn);
-        spinner = (Spinner) findViewById(R.id.spinner);
+        spinner = findViewById(R.id.spinner);
         Intent intent = getIntent();
         String[] list = {"Korean", "English", "Japanese", "Chinese"};
         ArrayAdapter<String> spAdapter = new ArrayAdapter<String>(this, R.layout.spinner_item, list);

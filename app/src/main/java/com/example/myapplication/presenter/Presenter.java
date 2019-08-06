@@ -2,9 +2,11 @@ package com.example.myapplication.presenter;
 
 import android.app.Activity;
 import android.content.Context;
+import android.os.Build;
 import android.speech.tts.UtteranceProgressListener;
+import android.support.annotation.RequiresApi;
 
-import com.example.myapplication.model.MemoService;
+import com.example.myapplication.model.bl.MemoService;
 import com.example.myapplication.model.bl.PermissionService;
 import com.example.myapplication.model.bl.STService;
 import com.example.myapplication.model.bl.TextService;
@@ -106,6 +108,7 @@ public class Presenter {
         stService.enableSTService(listener);
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public static void playService(String text) {
         stService.playService(text);
     }

@@ -1,24 +1,15 @@
 package com.example.myapplication.model.bl;
 
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Environment;
 
 import com.example.myapplication.model.dto.MemoDTO;
 import com.example.myapplication.util.TextDeleter;
 import com.example.myapplication.util.TextReader;
 import com.example.myapplication.util.TextWriter;
-import com.example.myapplication.view.MainActivity;
-import com.example.myapplication.view.ViewerActivity;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
 
 public class TextService extends Service {
     private String path;

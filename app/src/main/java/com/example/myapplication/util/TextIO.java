@@ -1,12 +1,6 @@
 package com.example.myapplication.util;
 
-import com.example.myapplication.model.dto.MemoDTO;
-
-import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 
 public class TextIO {
