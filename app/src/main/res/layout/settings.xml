@@ -61,7 +61,7 @@
         android:layout_marginStart="42dp"
         android:layout_marginLeft="42dp"
         android:layout_marginTop="117dp"
-        android:background="@xml/actions"
+
         />
     //목소리 톤
 
