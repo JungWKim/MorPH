@@ -1,6 +1,6 @@
 # MorPH
 
-[![Alt text](https://img.youtube.com/vi/VID/0.jpg)](https://www.youtube.com/watch?v=M8TTXUFmvMU&feature=youtu.be)
+[![Alt text](https://i9.ytimg.com/vi/M8TTXUFmvMU/mq2.jpg?sqp=COD944EG&rs=AOn4CLDvF63rSw781rfxsu5w12vnLi9jnw)](https://www.youtube.com/watch?v=M8TTXUFmvMU&feature=youtu.be)
 
 ![morPH조 최종보고서 - 포트폴리오용001](https://user-images.githubusercontent.com/50034678/109296311-71c15580-7873-11eb-9d38-ee03bbd7c64c.jpg)
 ![morPH조 최종보고서 - 포트폴리오용002](https://user-images.githubusercontent.com/50034678/109296313-71c15580-7873-11eb-9ee5-8f581c895747.jpg)
