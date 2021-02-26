@@ -1,10 +1,6 @@
 # MorPH
 first commit
 
-[](<iframe width="640" height="360" src="https://youtu.be/M8TTXUFmvMU" frameborder="0" gesture="media" allowfullscreen=""></iframe>
-)
-[![IMAGE ALT TEXT HERE]](https://youtu.be/M8TTXUFmvMU)
-
 ![morPH조 최종보고서 - 포트폴리오용001](https://user-images.githubusercontent.com/50034678/109296311-71c15580-7873-11eb-9d38-ee03bbd7c64c.jpg)
 ![morPH조 최종보고서 - 포트폴리오용002](https://user-images.githubusercontent.com/50034678/109296313-71c15580-7873-11eb-9ee5-8f581c895747.jpg)
 ![morPH조 최종보고서 - 포트폴리오용003](https://user-images.githubusercontent.com/50034678/109296315-7259ec00-7873-11eb-8176-56dd9305ae39.jpg)
